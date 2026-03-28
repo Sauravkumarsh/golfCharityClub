@@ -40,8 +40,8 @@ function App() {
     <Router>
     <Routes>
 
-      <Route path="/home" element={<Home />} />
-      <Route path="/admin-login" element={<AdminLoginPage setToken={setToken} setRole={setRole} setId={setId } />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/admin-login" element={<AdminLoginPage />} />
       <Route path="/winners" element={<GolfAdminPanel />} />
       <Route path="/charity" element={<CharityManagement />} />
       <Route path="/report" element={<GolfCharityDashboard />} />
