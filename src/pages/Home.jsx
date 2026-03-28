@@ -177,16 +177,31 @@ export default function GolfCharityClub() {
         {/* Mobile Menu */}
         {menuOpen && (
           <div className="md:hidden bg-stone-900 border-t border-stone-800 px-6 py-4 flex flex-col gap-3">
-            {NAV_LINKS.map((link) => (
               <button
-                key={link}
-                className={`text-left py-2 text-sm tracking-wider border-b border-stone-800 ${
-                  link === "Login" ? "text-amber-400 font-bold" : "text-stone-300 hover:text-amber-300"
-                }`}
+                onClick={()=>navigate("/home")}
+                className={`text-left py-2 text-sm tracking-wider border-b border-stone-800 `}
               >
-                {link}
+                Home
               </button>
-            ))}
+              <button
+                onClick={()=>navigate("/howtouse")}
+                className={`text-left py-2 text-sm tracking-wider border-b border-stone-800 `}
+              >
+                How to Use
+              </button>
+              <button
+                onClick={()=>navigate("/subscription")}
+                className={`text-left py-2 text-sm tracking-wider border-b border-stone-800 `}
+              >
+                Subscription
+              </button>
+              <button
+                onClick={()=>navigate("/admin-login")}
+                className={`text-left py-2 text-sm tracking-wider border-b border-stone-800 `}
+              >
+                Login
+              </button>
+          
           </div>
         )}
       </header>
