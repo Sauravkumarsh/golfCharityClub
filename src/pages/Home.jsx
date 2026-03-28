@@ -129,28 +129,40 @@ export default function GolfCharityClub() {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-1">
-            {NAV_LINKS.map((link) =>
-              link === "Login" ? (
-                <button
+            <button
+                onClick={()=>navigate("/home")}
+                className={`px-4 py-2 text-sm tracking-wider transition-colors duration-200`}
+                >
+                  Home
+                </button>
+          </nav>
+
+          <nav className="hidden md:flex items-center gap-1">
+            <button
+                 onClick={()=>navigate("/howtouse")}
+                  className={`px-4 py-2 text-sm tracking-wider transition-colors duration-200`}
+                >
+                  How To Use
+                </button>
+          </nav>
+
+          <nav className="hidden md:flex items-center gap-1">
+            <button
+                  onClick={()=>navigate("/subscription")}
+                  className={`px-4 py-2 text-sm tracking-wider transition-colors duration-200`}
+                >
+                  Subscription
+                </button>
+          </nav>
+
+
+          <nav className="hidden md:flex items-center gap-1">
+            <button
                   onClick={()=>navigate("/admin-login")}
                   className="ml-4 px-5 py-2 text-sm font-bold tracking-wider border border-amber-500 text-amber-400 hover:bg-amber-500 hover:text-stone-950 transition-all duration-200 rounded-sm"
                 >
                   Login
                 </button>
-              ) : (
-                <button
-                  key={link}
-                  onClick={() => setActiveLink(link)}
-                  className={`px-4 py-2 text-sm tracking-wider transition-colors duration-200 ${
-                    activeLink === link
-                      ? "text-amber-400 font-bold"
-                      : "text-stone-300 hover:text-amber-300"
-                  }`}
-                >
-                  {link}
-                </button>
-              )
-            )}
           </nav>
 
           {/* Mobile menu toggle */}

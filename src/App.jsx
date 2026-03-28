@@ -10,6 +10,8 @@ import GolfCharityDashboard from "./pages/Report";
 import AdminHomePage from "./pages/AdminHomePage";
 import UserHomePage from "./pages/UserHomePage";
 import GolfCharityClub from "./pages/UserDashboard";
+import GolfSubscription from "./pages/Subscription";
+import GolfHowToUse from "./pages/HowtoUse";
 
 
 
@@ -41,6 +43,7 @@ function App() {
     <Routes>
 
       <Route path="/" element={<Home />} />
+      <Route path="/home" element={<Home />} />
       <Route path="/admin-login" element={<AdminLoginPage />} />
       <Route path="/winners" element={<GolfAdminPanel />} />
       <Route path="/charity" element={<CharityManagement />} />
@@ -48,8 +51,10 @@ function App() {
       <Route path="/adminhome" element={<AdminHomePage  />} />
       <Route path="/userhome" element={<UserHomePage />} />
       <Route path="/dashboard" element={<GolfCharityClub />} />
-    
-      
+      <Route path="/subscription" element={<GolfSubscription />} />
+       <Route path="/howtouse" element={<GolfHowToUse />} />
+
+
     </Routes>
 
     </Router>
